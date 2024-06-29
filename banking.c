@@ -1,44 +1,41 @@
-#include<stdio.h>
-#include <stdlib.h>
-int main(){
-    int a,amount,withdraw,balance=1000;
-    while(1){
-        printf("Enter 1 for check balance\n");
-        printf("Enter 2 for deposit\n");
-        printf("Enter 3 for withdraw\n");
-        printf("Enter 4 for exit\n");
-        printf("Enter option(1/2/3/4):");
-        scanf("%d",&a);
-        system("cls");
-        switch(a){
-        case 1:
-        printf("%d\n",balance);
-        break;
-        case 2:
-        printf("enter deposit amount:");
-        scanf("%d",&amount);
-        printf("deposited successfully\n");
-        balance=balance+amount;
-        printf("balance is %d\n",balance);
-        break;
-        case 3:
-        printf("enter withdrawl amount:");
-        scanf("%d",&withdraw);
-        if(withdraw>balance){
-            printf("insufficient balance\n");
-        }
-        else{
-            balance=balance-withdraw;
-            printf("withdrawl successfully\n");
-            printf("withdrawl amount %d\n",withdraw);
-            printf("balance is %d\n",balance);
-        }
-        break;
-        case 4:
-        printf("exited");
-        return 0;
-        break;
-    }
-    }
-    
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int a=1000,i,d,w;
+   printf("enter 1 for Check Balance \nenter 2 for Deposit Money\nenter 3 for Withdraw Money\nenter 4 for Exit\n");
+   while(1){
+       
+   printf("enter your number: ");
+   scanf("%d",&i);
+   switch(i){
+       case 1:
+       printf("your balance %d \n",a);
+       break;
+       case 2:
+       printf("desposit your money: ");
+       scanf("%d",&d);
+       a=a+d;
+       printf("desposit sucessfully \n your balance: %d\n",a);
+       break;
+       case 3:
+       printf("enter the  money to withdraw: ");
+       scanf("%d",&w);
+       if (w<a){
+           a=a-w;
+           printf("withdraw sucessfully \n your balance: %d\n",a);
+           
+       }
+       else{
+           printf("you have insuffiecent balance\n");
+       }
+       break;
+       case 4:
+       printf("exited\n");
+       return 0;
+       break;
+       
+   }
 }
+}
+
